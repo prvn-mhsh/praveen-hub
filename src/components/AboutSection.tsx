@@ -1,16 +1,18 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Code2, 
-  Palette, 
-  Smartphone, 
-  Database, 
-  Cloud, 
+import {
+  Code2,
+  Palette,
+  Smartphone,
+  Database,
+  Cloud,
   Zap,
   Globe,
   Users
 } from 'lucide-react';
+import GlareHover from './GlareBorder';
+import BackgroundGradient from './ui/holographic-card';
 
 const AboutSection = () => {
   const skills = [
@@ -62,22 +64,22 @@ const AboutSection = () => {
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gradient">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Passionate developer with 5+ years of experience creating digital solutions 
-            that combine technical excellence with beautiful design.
+            Driven developer with 1+ years of experience in creating innovative digital solutions. I specialize in combining clean, efficient code with visually appealing and user-friendly designs
           </p>
         </div>
-
+ 
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Personal Info */}
+          <BackgroundGradient>
           <div className="animate-slide-in-left">
             <h3 className="text-2xl font-bold mb-6">My Journey</h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              I'm a passionate full-stack developer who loves turning ideas into reality through code. 
-              With expertise in modern web technologies and a keen eye for design, I create applications 
+            <p className="text-muted-foreground mb-6 leading-relaxed text-black">
+              I'm a passionate full-stack developer who loves turning ideas into reality through code.
+              With expertise in modern web technologies and a keen eye for design, I create applications
               that are not only functional but also visually stunning.
             </p>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
+            <p className="text-muted-foreground mb-6 leading-relaxed text-black">
+              When I'm not coding, you'll find me exploring new technologies, contributing to open-source
               projects, or sharing knowledge with the developer community.
             </p>
 
@@ -87,15 +89,17 @@ const AboutSection = () => {
                 Remote Available
               </Badge>
               <Badge variant="outline" className="glow-primary">
-                <Users className="mr-2 h-4 w-4" />
-                Team Player
+                <Users className="mr-2 h-4 w-4 text-black" />
+                <div className='text-black'>FreeLancer</div>
               </Badge>
               <Badge variant="outline" className="glow-accent">
-                <Zap className="mr-2 h-4 w-4" />
-                Fast Learner
+                <Zap className="mr-2 h-4 w-4 text-black" />
+                <div className='text-black'>Fast Learner</div>
               </Badge>
             </div>
           </div>
+          </BackgroundGradient>
+          
 
           {/* Skills */}
           <div className="animate-slide-in-right">
@@ -108,13 +112,17 @@ const AboutSection = () => {
                     <span className="text-muted-foreground">{skill.level}%</span>
                   </div>
                   <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000 ease-out group-hover:glow-primary"
-                      style={{ 
+                    <div
+                      className="h-full rounded-full transition-all duration-1000 ease-out bg-gradient-to-r from-primary to-secondary"
+                      style={{
                         width: `${skill.level}%`,
-                        animationDelay: `${index * 0.1}s`
+                        animation: `shine 3s linear infinite`,
+                        backgroundSize: "200% 200%",
+                        transition: "width 1s ease-out",
+                        transitionDelay: `${index * 0.2}s`,
                       }}
                     ></div>
+
                   </div>
                 </div>
               ))}
@@ -127,8 +135,8 @@ const AboutSection = () => {
           <h3 className="text-3xl font-bold text-center mb-12">What I Do</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <Card 
-                key={service.title} 
+              <Card
+                key={service.title}
                 className="bg-card-gradient border-border hover:border-primary transition-smooth group cursor-pointer transform hover:scale-105"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >

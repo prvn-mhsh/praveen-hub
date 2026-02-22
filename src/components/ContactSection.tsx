@@ -45,19 +45,19 @@ const ContactSection = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       label: 'Email',
-      value: 'your.email@example.com',
-      href: 'mailto:your.email@example.com'
+      value: 'praveenmahesh06@gmail.com',
+      href: 'mailto:praveenmahesh06@gmail.com'
     },
     {
       icon: <Phone className="h-6 w-6" />,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      value: '+91 8778890942',
+      href: 'tel:+918778890942'
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Chennai, TN',
       href: '#'
     }
   ];

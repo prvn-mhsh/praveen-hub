@@ -17,7 +17,7 @@ const Navigation = () => {
   const navItems = [
     { label: 'Home', href: '#home' },
     { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
+    { label: 'Experience', href: '#projects' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -38,7 +38,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="text-xl font-bold text-gradient cursor-pointer"
                onClick={() => scrollToSection('#home')}>
-            Portfolio
+            Praveen Hub
           </div>
 
           {/* Desktop Navigation */}
@@ -56,16 +56,29 @@ const Navigation = () => {
 
           {/* Social Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="icon">
-              <Github className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon">
-              <Linkedin className="h-5 w-5" />
-            </Button>
-            <Button variant="ghost" size="icon">
-              <Mail className="h-5 w-5" />
-            </Button>
-          </div>
+  <Button
+    variant="ghost"
+    size="icon"
+    onClick={() => window.open('https://github.com/prvn-mhsh', '_blank')}
+  >
+    <Github className="h-5 w-5" />
+  </Button>
+  <Button
+    variant="ghost"
+    size="icon"
+    onClick={() => window.open('https://www.linkedin.com/in/prvnmhsh/', '_blank')}
+  >
+    <Linkedin className="h-5 w-5" />
+  </Button>
+  <Button
+    variant="ghost"
+    size="icon"
+    onClick={() => window.open('mailto:prvn.mhsh.143@gmail.com')}
+  >
+    <Mail className="h-5 w-5" />
+  </Button>
+</div>
+
 
           {/* Mobile Menu Button */}
           <Button

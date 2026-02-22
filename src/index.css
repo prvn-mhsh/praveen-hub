@@ -74,6 +74,26 @@ All colors MUST be HSL for consistent theming.
 
   /* Dark mode uses same colors - portfolio is inherently dark themed */
 }
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
+/* Gradient shimmer animation */
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Smooth width growth */
+@keyframes growWidth {
+  from { width: 0%; }
+  to { width: var(--target-width); }
+}
 
 @layer base {
   * {
