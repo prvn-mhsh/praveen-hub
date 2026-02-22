@@ -55,11 +55,11 @@ const Footer = () => {
           <p className="flex items-center mb-4 md:mb-0">
             © {currentYear} Portfolio. Made with 
             <Heart className="mx-2 h-4 w-4 text-red-500 animate-pulse" />
-            and lots of coffee.
+            and lots of Love.
           </p>
           <p>
             Designed & Developed by{' '}
-            <span className="text-gradient font-medium">Your Name</span>
+            <span className="text-gradient font-medium">Praveen</span>
           </p>
         </div>
       </div>

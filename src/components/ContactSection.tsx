@@ -66,19 +66,19 @@ const ContactSection = () => {
     {
       icon: <Github className="h-6 w-6" />,
       label: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/prvn-mhsh',
       color: 'hover:text-foreground'
     },
     {
       icon: <Linkedin className="h-6 w-6" />,
       label: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/prvnmhsh/',
       color: 'hover:text-primary'
     },
     {
       icon: <Twitter className="h-6 w-6" />,
       label: 'Twitter',
-      href: 'https://twitter.com',
+      href: 'https://x.com/prvn_mhsh29',
       color: 'hover:text-accent'
     }
   ];
