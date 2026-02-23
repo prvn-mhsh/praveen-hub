@@ -3,14 +3,21 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/praveen-hub/",   // MUST match repo name
+
   server: {
     host: "::",
     port: 8080,
   },
-  assetsInclude: ['**/*.glb'],
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+
+  assetsInclude: ["**/*.glb"],
+
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+  ].filter(Boolean),
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
